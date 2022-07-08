@@ -50,18 +50,19 @@ void loop() {
     .write(pos);              // tell servo to go to position in variable 'pos'
     delay(15);                       // waits 15 ms for the servo to reach the position
   }
-  if (red > green and red > blue+20 and red >115) {
-    myservo1.write(0); 
-  } else if (green > red and green > blue and green > 115) {
-    myservo1.write(25);
-  } else if (blue > red and blue > green and blue > 115) {
-    myservo1.write(50);
-  } else if (red > blue and green > blue and red > 115 and green > 115) {
+ 
+  if (red > blue and green > blue and red > 115 and green > 115) {
     myservo1.write(75);
   } else if (green > red and blue > red and green > 115 and red > 115) {
     myservo1.write(50);
   } else if (blue > green and red > green and blue > 115 and red > 115) {
     myservo1.write(0);
+  } else if (red > green and red > blue+20 and red >115) {
+    myservo1.write(0); 
+  } else if (green > red and green > blue and green > 115) {
+    myservo1.write(25);
+  } else if (blue > red and blue > green and blue > 115) {
+    myservo1.write(50);
   } else if (red < 81) {
     myservo1.write(100);    
   } else if (red < 90){
